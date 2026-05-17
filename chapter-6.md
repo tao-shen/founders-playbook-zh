@@ -1,4 +1,10 @@
-# 第 6 章 · 规模化阶段
+<div class="chapter-hero hero-sage">
+  <div class="hero-text">
+    <span class="chapter-pill">第 6 章</span>
+    <h1 class="hero-title">规模化阶段</h1>
+  </div>
+  <img class="hero-art" src="assets/illustrations/ch6.png" alt="">
+</div>
 
 在规模化阶段，创始人的角色从构建者重新聚焦为面向公众的高管。产品依然居于核心，但你个人的日常工作，越来越多地是关于公司本身。你的注意力必须扩展到新的规模化阶段活动，比如分析师沟通会和 IPO 路演——与此同时，你还要努力保持那个精简、以 AI 为中心的结构性优势。
 

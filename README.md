@@ -1,9 +1,26 @@
-# 创始人手册：打造 AI 原生创业公司
-
-> **The Founder's Playbook: Building an AI-Native Startup**
-> 原书作者：Anthropic（Claude 团队）· 本页面为中文翻译版
-
----
+<div class="book-cover hero-clay">
+  <div class="cover-mark">
+    <svg viewBox="0 0 100 100" aria-hidden="true">
+      <g fill="#191512">
+        <g id="ray"><polygon points="50,3 53,49 50,60 47,49"></polygon></g>
+        <use href="#ray" transform="rotate(30 50 50)"></use>
+        <use href="#ray" transform="rotate(60 50 50)"></use>
+        <use href="#ray" transform="rotate(90 50 50)"></use>
+        <use href="#ray" transform="rotate(120 50 50)"></use>
+        <use href="#ray" transform="rotate(150 50 50)"></use>
+        <use href="#ray" transform="rotate(180 50 50)"></use>
+        <use href="#ray" transform="rotate(210 50 50)"></use>
+        <use href="#ray" transform="rotate(240 50 50)"></use>
+        <use href="#ray" transform="rotate(270 50 50)"></use>
+        <use href="#ray" transform="rotate(300 50 50)"></use>
+        <use href="#ray" transform="rotate(330 50 50)"></use>
+      </g>
+    </svg>
+  </div>
+  <h1 class="cover-title">创始人手册</h1>
+  <p class="cover-sub">打造 AI 原生创业公司</p>
+  <p class="cover-byline">The Founder's Playbook: Building an AI-Native Startup<br>原书作者：Anthropic（Claude 团队）· 本页面为完整中文翻译版</p>
+</div>
 
 AI 正在重塑创业公司的构建方式。从没写过一行代码的创始人，今天也能交付生产级应用；精简到 10 人的独角兽，已经从"草根逆袭"的传奇，变成一份可以照着执行的行动计划。
 

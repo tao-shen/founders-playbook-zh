@@ -1,4 +1,10 @@
-# 第 7 章 · 同样的使命，全新的规则
+<div class="chapter-hero hero-peri">
+  <div class="hero-text">
+    <span class="chapter-pill">第 7 章</span>
+    <h1 class="hero-title">同样的使命，<br>全新的规则</h1>
+  </div>
+  <img class="hero-art" src="assets/illustrations/ch7.png" alt="">
+</div>
 
 在 AI 时代，创始人的使命没有变：找到一个真实的问题，造出能解决它的东西，并把它规模化成一家举足轻重的公司。变的是抵达那里的路径。在四个阶段——创意、MVP、发布、规模化——之中，AI 把一个个季度压缩成一个个星期。
 

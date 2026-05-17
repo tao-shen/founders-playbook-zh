@@ -1,4 +1,10 @@
-# 第 3 章 · 创意阶段
+<div class="chapter-hero hero-mint">
+  <div class="hero-text">
+    <span class="chapter-pill">第 3 章</span>
+    <h1 class="hero-title">创意阶段</h1>
+  </div>
+  <img class="hero-art" src="assets/illustrations/ch3.png" alt="">
+</div>
 
 每个创业者都从同一个地方出发：一个让他们停不下来去想的问题。这是创意撞上现实的阶段：2026 年的创业要想成功，需要一种纪律——在证据足以支撑之前，绝不动手构建。
 

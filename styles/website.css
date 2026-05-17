@@ -1,58 +1,348 @@
-/* 中文排版优化 */
-.markdown-section {
-  font-family: -apple-system, "PingFang SC", "Hiragino Sans GB",
-    "Microsoft YaHei", "Source Han Sans SC", "Noto Sans CJK SC", sans-serif;
-  line-height: 1.85;
-  font-size: 16px;
-  letter-spacing: 0.01em;
+/* ============================================================
+   《创始人手册》中文版 — 还原 Anthropic 原书视觉风格
+   品牌色 / 衬线标题 / 章节彩色封面 hero / 手绘插画
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@500;700;900&family=Noto+Sans+SC:wght@400;500;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&display=swap');
+
+:root {
+  --clay: #d97757;
+  --clay-deep: #c25b3a;
+  --sage: #629987;
+  --peri: #827dbd;
+  --mint: #bcd1ca;
+  --lavender: #cbcadb;
+  --blush: #f0d5c7;
+  --taupe: #b0aea5;
+  --ink: #191512;
+  --ink-soft: #5a5048;
+  --paper: #faf6f0;
+  --paper-deep: #f1e9df;
+  --line: #e6dccf;
 }
 
+/* ---------- 全局基底 ---------- */
+.book,
+.book-body,
+.book.color-theme-1 .book-body,
+.page-wrapper {
+  background: var(--paper) !important;
+}
+
+.book,
+.markdown-section {
+  font-family: "Noto Sans SC", -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+  color: var(--ink);
+}
+
+.markdown-section {
+  font-size: 17px;
+  line-height: 1.9;
+  letter-spacing: 0.01em;
+  max-width: 760px;
+  padding: 0 24px 60px;
+}
+
+.page-inner {
+  max-width: 860px;
+  padding-top: 0;
+}
+
+.markdown-section p {
+  margin: 1em 0;
+  color: #2b241e;
+}
+
+.markdown-section strong { color: var(--ink); font-weight: 700; }
+.markdown-section em { font-style: normal; color: var(--clay-deep); }
+
+/* 西文用衬线，更贴近原书 */
+.markdown-section,
+.markdown-section p {
+  font-feature-settings: "kern" 1;
+}
+
+/* ---------- 标题：衬线 ---------- */
 .markdown-section h1,
 .markdown-section h2,
-.markdown-section h3 {
+.markdown-section h3,
+.markdown-section h4 {
+  font-family: "Noto Serif SC", "Newsreader", Georgia, serif;
+  color: var(--ink);
   font-weight: 700;
   letter-spacing: 0;
-}
-
-.markdown-section h1 {
-  margin-top: 0.5em;
-  padding-bottom: 0.3em;
-  border-bottom: 2px solid #e8b89b;
+  line-height: 1.35;
 }
 
 .markdown-section h2 {
-  margin-top: 2em;
-  border-bottom: 1px solid #eee;
-  padding-bottom: 0.25em;
+  font-size: 1.7em;
+  margin: 2.4em 0 0.9em;
+  padding-bottom: 0.35em;
+  border-bottom: 1px solid var(--line);
 }
 
-/* 体例标注：引导语 / 练习 / 挑战 等用引用块承载 */
+.markdown-section h3 {
+  font-size: 1.3em;
+  margin: 2em 0 0.7em;
+  color: var(--clay-deep);
+}
+
+.markdown-section h4 { font-size: 1.1em; margin: 1.6em 0 0.6em; }
+
+/* 正文内首个 H1（非 hero）隐藏，标题由 hero 承担 */
+.markdown-section > h1:first-child { display: none; }
+
+/* ============================================================
+   章节封面 HERO —— 还原 PDF 整版彩色封面
+   ============================================================ */
+.chapter-hero {
+  position: relative;
+  margin: 8px -24px 56px;
+  padding: 0;
+  border-radius: 22px;
+  overflow: hidden;
+  min-height: 330px;
+  display: flex;
+  align-items: flex-end;
+  isolation: isolate;
+}
+
+.chapter-hero .hero-text {
+  position: relative;
+  z-index: 2;
+  padding: 44px 46px 40px;
+  max-width: 62%;
+}
+
+.chapter-hero .chapter-pill {
+  display: inline-block;
+  font-family: "Noto Sans SC", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--ink);
+  border: 1.6px solid rgba(25, 21, 18, 0.55);
+  border-radius: 999px;
+  padding: 5px 16px;
+  margin-bottom: 22px;
+  background: transparent;
+}
+
+.chapter-hero h1.hero-title {
+  display: block !important;
+  font-family: "Noto Serif SC", "Newsreader", Georgia, serif;
+  font-weight: 900;
+  font-size: 2.9rem;
+  line-height: 1.18;
+  margin: 0;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+}
+
+.chapter-hero .hero-art {
+  position: absolute;
+  right: 3%;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 80%;
+  max-height: 320px;
+  width: auto;
+  z-index: 1;
+  pointer-events: none;
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.06));
+}
+
+/* 章节品牌色 */
+.hero-clay     { background: var(--clay); }
+.hero-sage     { background: var(--sage); }
+.hero-peri     { background: var(--peri); }
+.hero-mint     { background: var(--mint); }
+.hero-lavender { background: var(--lavender); }
+.hero-blush    { background: var(--blush); }
+.hero-taupe    { background: var(--taupe); }
+
+@media (max-width: 680px) {
+  .chapter-hero { flex-direction: column; align-items: stretch; min-height: 0; }
+  .chapter-hero .hero-text { max-width: 100%; padding: 30px 26px 22px; }
+  .chapter-hero h1.hero-title { font-size: 2rem; }
+  .chapter-hero .hero-art {
+    position: static; transform: none; height: auto;
+    width: 58%; max-height: none; align-self: flex-end;
+    margin: -10px 22px 26px;
+  }
+}
+
+/* ============================================================
+   封面（README）
+   ============================================================ */
+.book-cover {
+  margin: 8px -24px 50px;
+  border-radius: 24px;
+  background: var(--clay);
+  color: var(--ink);
+  padding: 76px 56px 70px;
+  text-align: left;
+}
+
+.book-cover .cover-mark {
+  width: 56px; height: 56px; margin-bottom: 30px;
+}
+.book-cover .cover-mark svg { width: 100%; height: 100%; display: block; }
+
+.book-cover .cover-title {
+  font-family: "Noto Serif SC", "Newsreader", Georgia, serif;
+  font-weight: 900;
+  font-size: 3.4rem;
+  line-height: 1.15;
+  margin: 0 0 14px;
+  color: var(--ink);
+}
+
+.book-cover .cover-sub {
+  font-family: "Noto Serif SC", serif;
+  font-weight: 700;
+  font-size: 1.7rem;
+  margin: 0 0 26px;
+  color: var(--ink);
+}
+
+.book-cover .cover-byline {
+  font-size: 0.98rem;
+  color: rgba(25, 21, 18, 0.72);
+  margin: 0;
+  line-height: 1.7;
+}
+
+@media (max-width: 680px) {
+  .book-cover { padding: 56px 30px 50px; }
+  .book-cover .cover-title { font-size: 2.3rem; }
+  .book-cover .cover-sub { font-size: 1.25rem; }
+}
+
+/* ============================================================
+   体例标注（引导语 / 挑战 / 注 / 练习）
+   ============================================================ */
 .markdown-section blockquote {
-  border-left: 4px solid #d97757;
-  background: #faf5f2;
-  color: #50414b;
-  padding: 0.8em 1.2em;
-  margin: 1.2em 0;
+  border-left: 4px solid var(--clay);
+  background: var(--paper-deep);
+  color: var(--ink-soft);
+  padding: 0.9em 1.4em;
+  margin: 1.5em 0;
+  border-radius: 0 10px 10px 0;
 }
 
-.markdown-section blockquote p {
-  margin: 0.3em 0;
+.markdown-section blockquote p { margin: 0.35em 0; }
+.markdown-section blockquote strong,
+.markdown-section blockquote em { color: var(--clay-deep); font-style: normal; }
+
+/* 章节内"选对形态"方框（含 h3 的引用块） */
+.markdown-section blockquote:has(h3) {
+  border-left: none;
+  background: #fff;
+  border: 1px solid var(--line);
+  box-shadow: 0 2px 16px rgba(120, 90, 60, 0.06);
+  border-radius: 14px;
+  padding: 0.4em 1.6em 1.2em;
+}
+.markdown-section blockquote h3 {
+  margin-top: 1em;
+  color: var(--ink);
+  border: none;
 }
 
+/* ---------- 列表 ---------- */
+.markdown-section ul { list-style: none; padding-left: 1.3em; }
+.markdown-section ul > li { position: relative; margin: 0.55em 0; }
+.markdown-section ul > li::before {
+  content: "";
+  position: absolute;
+  left: -1.1em; top: 0.78em;
+  width: 6px; height: 6px;
+  background: var(--clay);
+  border-radius: 50%;
+}
+.markdown-section ol { padding-left: 1.4em; }
+.markdown-section ol > li { margin: 0.55em 0; }
+.markdown-section ol > li::marker { color: var(--clay-deep); font-weight: 700; }
+
+/* "练习：" 列表项强调 */
+.markdown-section li > strong:first-child { color: var(--clay-deep); }
+
+/* ---------- 表格 ---------- */
 .markdown-section table {
-  display: table;
-  width: 100%;
+  display: table; width: 100%;
+  border-collapse: separate; border-spacing: 0;
+  border: 1px solid var(--line); border-radius: 12px;
+  overflow: hidden; margin: 1.6em 0;
 }
-
 .markdown-section table th {
-  background: #f4ede8;
+  background: var(--paper-deep);
+  font-family: "Noto Serif SC", serif;
+  color: var(--ink); text-align: left;
+  border: none; padding: 14px 18px;
+}
+.markdown-section table td {
+  border: none; border-top: 1px solid var(--line);
+  padding: 13px 18px; background: #fff;
 }
 
-/* 段落首行不缩进，靠行距区分，更适合屏幕阅读 */
-.markdown-section p {
-  margin: 0.9em 0;
+/* ---------- 链接 ---------- */
+.markdown-section a {
+  color: var(--clay-deep);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(194, 91, 58, 0.4);
+  transition: border-color 0.15s, color 0.15s;
+}
+.markdown-section a:hover { color: var(--clay); border-bottom-color: var(--clay); }
+
+.markdown-section hr {
+  border: none;
+  border-top: 1px solid var(--line);
+  margin: 2.4em 0;
 }
 
+/* ============================================================
+   Honkit 侧栏 / 工具条
+   ============================================================ */
 .book-summary {
+  background: var(--paper-deep);
+  border-right: 1px solid var(--line);
+  font-family: "Noto Sans SC", sans-serif;
   font-size: 14px;
 }
+.book-summary ul.summary li a {
+  color: var(--ink-soft);
+  padding: 11px 16px;
+  transition: color 0.15s, background 0.15s;
+}
+.book-summary ul.summary li a:hover { color: var(--clay-deep); background: rgba(217, 119, 87, 0.06); }
+.book-summary ul.summary li.active > a {
+  color: var(--clay-deep) !important;
+  background: rgba(217, 119, 87, 0.1);
+  font-weight: 700;
+  border-left: 3px solid var(--clay);
+}
+.book-summary ul.summary li.divider { background: var(--line); }
+
+.book-header {
+  background: var(--paper) !important;
+  box-shadow: 0 1px 0 var(--line);
+}
+.book-header h1 { display: none; }
+.book.color-theme-1 .book-header,
+.book-header .btn { color: var(--ink-soft) !important; }
+
+/* 上一页 / 下一页 */
+.navigation { color: var(--clay) !important; }
+.navigation:hover { color: var(--clay-deep) !important; }
+
+/* 代码 / 行内代码 */
+.markdown-section code {
+  background: var(--paper-deep);
+  color: var(--clay-deep);
+  padding: 2px 7px; border-radius: 5px;
+  font-size: 0.88em;
+}
+
+/* 阅读体验：滚动条与选区 */
+::selection { background: rgba(217, 119, 87, 0.25); }

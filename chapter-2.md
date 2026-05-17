@@ -1,4 +1,10 @@
-# 第 2 章 · 创始人的含义正在改变
+<div class="chapter-hero hero-peri">
+  <div class="hero-text">
+    <span class="chapter-pill">第 2 章</span>
+    <h1 class="hero-title">创始人的含义<br>正在改变</h1>
+  </div>
+  <img class="hero-art" src="assets/illustrations/ch2.png" alt="">
+</div>
 
 过去，创始人是由"他能做什么"来定义的：技术型创始人写代码，非技术型创始人管业务运营、谈成交易。但 2026 年创始人手中的模型、系统和 AI 智能体，已经溶解了"能动手造东西的人"和"有值得造的点子的人"之间那堵墙。
 

@@ -1,4 +1,10 @@
-# 第 1 章 · 为 2026 重启的创业生命周期
+<div class="chapter-hero hero-sage">
+  <div class="hero-text">
+    <span class="chapter-pill">第 1 章</span>
+    <h1 class="hero-title">为 2026 重启的<br>创业生命周期</h1>
+  </div>
+  <img class="hero-art" src="assets/illustrations/ch1.png" alt="">
+</div>
 
 AI 正在重塑创业公司的构建方式。从没写过一行代码的创始人，今天也在交付生产级应用；精简到 10 人的独角兽，已经从"草根逆袭"的传奇故事，变成一份可以刻意照着执行的行动计划。
 

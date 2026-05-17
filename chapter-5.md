@@ -1,4 +1,10 @@
-# 第 5 章 · 发布阶段
+<div class="chapter-hero hero-blush">
+  <div class="hero-text">
+    <span class="chapter-pill">第 5 章</span>
+    <h1 class="hero-title">发布阶段</h1>
+  </div>
+  <img class="hero-art" src="assets/illustrations/ch5.png" alt="">
+</div>
 
 如果说 MVP 阶段是在证明你的产品值得存在，那么发布阶段就是在证明你的生意值得增长。
 

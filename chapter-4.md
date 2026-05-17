@@ -1,4 +1,10 @@
-# 第 4 章 · MVP 阶段
+<div class="chapter-hero hero-lavender">
+  <div class="hero-text">
+    <span class="chapter-pill">第 4 章</span>
+    <h1 class="hero-title">MVP 阶段</h1>
+  </div>
+  <img class="hero-art" src="assets/illustrations/ch4.png" alt="">
+</div>
 
 很多创始人把 MVP 阶段当成一个施工阶段，但 MVP 阶段本质上仍然是一场收集证据的演练。不同之处在于，你现在收集的是关于**方案**的证据，而不是关于问题空间的证据；具体来说，就是：一个真实、可识别的人群，是否觉得它有价值到愿意去用它、回头再用它、为它付费，并且/或者把它告诉别人。
 

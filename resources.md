@@ -1,4 +1,10 @@
-# 延伸资源
+<div class="chapter-hero hero-taupe">
+  <div class="hero-text">
+    <span class="chapter-pill">资源</span>
+    <h1 class="hero-title">延伸资源</h1>
+  </div>
+  <img class="hero-art" src="assets/illustrations/resources.png" alt="">
+</div>
 
 > 原书中以下大多数条目为可点击链接。原始 PDF 未内嵌完整 URL，故此处保留条目名称与说明；可在 [claude.ai](https://claude.ai) 或 [claude.com](https://claude.com) 站内检索对应内容。
 
