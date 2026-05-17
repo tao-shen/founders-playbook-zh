@@ -3,9 +3,35 @@
    品牌色 / 衬线标题 / 章节彩色封面 hero / 手绘插画
    ============================================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@500;700;900&family=Noto+Sans+SC:wght@400;500;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&display=swap');
+/* 中文回退字体（思源/Noto，覆盖非苹果设备） */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@500;700;900&family=Noto+Sans+SC:wght@400;500;700&display=swap');
+
+/* Anthropic 官方品牌字体（拉丁文，自其公开 CDN 直链；含 Roman/Italic，可变字重 300–800） */
+@font-face {
+  font-family: "Anthropic Sans";
+  src: url("https://cdn.prod.website-files.com/67ce28cfec624e2b733f8a52/69971a00a3295036497e1a28_AnthropicSans-Roman-Web.woff2") format("woff2");
+  font-weight: 300 800; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "Anthropic Sans";
+  src: url("https://cdn.prod.website-files.com/67ce28cfec624e2b733f8a52/69971a016067bf14b9b8f48d_AnthropicSans-Italic-Web.woff2") format("woff2");
+  font-weight: 300 800; font-style: italic; font-display: swap;
+}
+@font-face {
+  font-family: "Anthropic Serif";
+  src: url("https://cdn.prod.website-files.com/67ce28cfec624e2b733f8a52/69971a1551eb6cda0d656e8a_AnthropicSerif-Roman-Web.woff2") format("woff2");
+  font-weight: 300 800; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "Anthropic Serif";
+  src: url("https://cdn.prod.website-files.com/67ce28cfec624e2b733f8a52/69971a15a9fb8c1107a3570e_AnthropicSerif-Italic-Web.woff2") format("woff2");
+  font-weight: 300 800; font-style: italic; font-display: swap;
+}
 
 :root {
+  /* 官方拉丁字体 + 苹方/Noto 中文（Claude.ai 同款中文渲染） */
+  --font-sans: "Anthropic Sans", "PingFang SC", "Noto Sans SC", -apple-system, BlinkMacSystemFont, "Microsoft YaHei", sans-serif;
+  --font-serif: "Anthropic Serif", "Noto Serif SC", "PingFang SC", Georgia, serif;
   --clay: #d97757;
   --clay-deep: #c25b3a;
   --sage: #629987;
@@ -31,7 +57,7 @@
 
 .book,
 .markdown-section {
-  font-family: "Noto Sans SC", -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-family: var(--font-sans);
   color: var(--ink);
 }
 
@@ -67,7 +93,7 @@
 .markdown-section h2,
 .markdown-section h3,
 .markdown-section h4 {
-  font-family: "Noto Serif SC", "Newsreader", Georgia, serif;
+  font-family: var(--font-serif);
   color: var(--ink);
   font-weight: 700;
   letter-spacing: 0;
@@ -116,7 +142,7 @@
 
 .chapter-hero .chapter-pill {
   display: inline-block;
-  font-family: "Noto Sans SC", sans-serif;
+  font-family: var(--font-sans);
   font-size: 14px;
   font-weight: 700;
   letter-spacing: 0.02em;
@@ -130,7 +156,7 @@
 
 .chapter-hero h1.hero-title {
   display: block !important;
-  font-family: "Noto Serif SC", "Newsreader", Georgia, serif;
+  font-family: var(--font-serif);
   font-weight: 900;
   font-size: 2.9rem;
   line-height: 1.18;
@@ -190,7 +216,7 @@
 .book-cover .cover-mark svg { width: 100%; height: 100%; display: block; }
 
 .book-cover .cover-title {
-  font-family: "Noto Serif SC", "Newsreader", Georgia, serif;
+  font-family: var(--font-serif);
   font-weight: 900;
   font-size: 3.4rem;
   line-height: 1.15;
@@ -199,7 +225,7 @@
 }
 
 .book-cover .cover-sub {
-  font-family: "Noto Serif SC", serif;
+  font-family: var(--font-serif);
   font-weight: 700;
   font-size: 1.7rem;
   margin: 0 0 26px;
@@ -277,7 +303,7 @@
 }
 .markdown-section table th {
   background: var(--paper-deep);
-  font-family: "Noto Serif SC", serif;
+  font-family: var(--font-serif);
   color: var(--ink); text-align: left;
   border: none; padding: 14px 18px;
 }
@@ -307,7 +333,7 @@
 .book-summary {
   background: var(--paper-deep);
   border-right: 1px solid var(--line);
-  font-family: "Noto Sans SC", sans-serif;
+  font-family: var(--font-sans);
   font-size: 14px;
 }
 .book-summary ul.summary li a {
