@@ -33,6 +33,9 @@ jobs:
       - name: Build with Honkit
         run: npx honkit build
 
+      - name: Add custom domain (CNAME)
+        run: cp CNAME _book/CNAME
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
