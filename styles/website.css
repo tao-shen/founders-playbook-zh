@@ -1,0 +1,58 @@
+/* 中文排版优化 */
+.markdown-section {
+  font-family: -apple-system, "PingFang SC", "Hiragino Sans GB",
+    "Microsoft YaHei", "Source Han Sans SC", "Noto Sans CJK SC", sans-serif;
+  line-height: 1.85;
+  font-size: 16px;
+  letter-spacing: 0.01em;
+}
+
+.markdown-section h1,
+.markdown-section h2,
+.markdown-section h3 {
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+.markdown-section h1 {
+  margin-top: 0.5em;
+  padding-bottom: 0.3em;
+  border-bottom: 2px solid #e8b89b;
+}
+
+.markdown-section h2 {
+  margin-top: 2em;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 0.25em;
+}
+
+/* 体例标注：引导语 / 练习 / 挑战 等用引用块承载 */
+.markdown-section blockquote {
+  border-left: 4px solid #d97757;
+  background: #faf5f2;
+  color: #50414b;
+  padding: 0.8em 1.2em;
+  margin: 1.2em 0;
+}
+
+.markdown-section blockquote p {
+  margin: 0.3em 0;
+}
+
+.markdown-section table {
+  display: table;
+  width: 100%;
+}
+
+.markdown-section table th {
+  background: #f4ede8;
+}
+
+/* 段落首行不缩进，靠行距区分，更适合屏幕阅读 */
+.markdown-section p {
+  margin: 0.9em 0;
+}
+
+.book-summary {
+  font-size: 14px;
+}

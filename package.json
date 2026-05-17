@@ -1,0 +1,13 @@
+{
+  "name": "founders-playbook-zh",
+  "version": "1.0.0",
+  "private": true,
+  "description": "《创始人手册：打造 AI 原生创业公司》—— Anthropic The Founder's Playbook 中文版",
+  "scripts": {
+    "build": "honkit build",
+    "serve": "honkit serve"
+  },
+  "devDependencies": {
+    "honkit": "^6.0.2"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "title": "创始人手册：打造 AI 原生创业公司",
+  "description": "Anthropic《The Founder's Playbook: Building an AI-Native Startup》中文翻译版",
+  "language": "zh-hans",
+  "author": "Anthropic · 中文翻译版",
+  "plugins": ["-sharing"],
+  "styles": {
+    "website": "styles/website.css"
+  },
+  "pdf": {
+    "fontSize": 12,
+    "paperSize": "a4"
+  }
+}
